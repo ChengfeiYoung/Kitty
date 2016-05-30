@@ -17,10 +17,11 @@ class TabBarController: UITabBarController {
         let kittyVC:KittyViewController = UIStoryboard(name:"Main", bundle: nil).instantiateViewControllerWithIdentifier("KittyViewController") as! KittyViewController
         kittyVC.headTitle = "喵星人"
         let kittysArray:NSMutableArray = NSMutableArray()
-        for(var i=1; i<=6;i+=1) {
+        for i in 1..<7{
             let string:String = String(format: "kitty_\(i)");
             kittysArray.addObject(string)
         }
+        
         kittyVC.itemsArray = kittysArray
         self.setupChildVC(kittyVC, title: "喵星人", image: "kitty_unselect", selectedImage: "kitty_select")
         
