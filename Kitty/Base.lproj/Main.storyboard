@@ -101,6 +101,49 @@
             </objects>
             <point key="canvasLocation" x="1378" y="-1195"/>
         </scene>
+        <!--Detail Table View Cotroller-->
+        <scene sceneID="XM5-rR-ilM">
+            <objects>
+                <tableViewController storyboardIdentifier="DetailTableViewCotroller" id="z3W-HO-Mqy" customClass="DetailTableViewCotroller" customModule="Kitty" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="560" sectionHeaderHeight="28" sectionFooterHeight="28" id="cCC-Uy-ilb">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailCell" id="C8R-Lr-FcK" customClass="DetailCell" customModule="Kitty" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="768" height="560"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C8R-Lr-FcK" id="FKi-ze-LlL">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="560"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tzM-dR-76W">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="560"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="tzM-dR-76W" secondAttribute="bottom" id="CAa-2t-FWB"/>
+                                        <constraint firstAttribute="trailing" secondItem="tzM-dR-76W" secondAttribute="trailing" id="CVu-7n-LNL"/>
+                                        <constraint firstItem="tzM-dR-76W" firstAttribute="leading" secondItem="FKi-ze-LlL" secondAttribute="leading" id="eGz-dr-LhH"/>
+                                        <constraint firstItem="tzM-dR-76W" firstAttribute="top" secondItem="FKi-ze-LlL" secondAttribute="top" id="iQo-5c-HO5"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgView" destination="tzM-dR-76W" id="6PJ-sr-VAY"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="z3W-HO-Mqy" id="Of2-Wy-wsg"/>
+                            <outlet property="delegate" destination="z3W-HO-Mqy" id="B99-PD-K7b"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gHw-2a-J55" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2348" y="-1195"/>
+        </scene>
         <!--Pet View Controller-->
         <scene sceneID="5v1-N3-wmD">
             <objects>

@@ -11,6 +11,7 @@ import UIKit
 class DetailViewController: UIViewController {
     var imageName:String!
     var imageView:UIImageView!
+    var hintView:HintView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +25,8 @@ class DetailViewController: UIViewController {
         imageView.image = UIImage(named:imageName)
         imageView.contentMode = UIViewContentMode.ScaleAspectFit
         scrollView.addSubview(imageView)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
